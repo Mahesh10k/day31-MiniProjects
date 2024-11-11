@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 1.2rem;
+        }
+        button{
+            background-color: pink;
+            padding: 8px;
+            font-size: 1rem;
+        }
+        div{
+            background-color: cadetblue;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div></div>
+    <button onclick="getQuote()">Generate Quote</button>
+
+    <script>
+        let quoteData=
+                    [
+                    "The only way to do great work is to love what you do. - Steve Jobs",
+                    "Innovation distinguishes between a leader and a follower. - Steve Jobs",
+                    "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+                    "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+                    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+                    "Be yourself; everyone else is already taken. - Oscar Wilde",
+                    "Be the change that you wish to see in the world. - Mahatma Gandhi",
+                    "Great minds discuss ideas; average minds discuss events; small minds discuss people. -  Eleanor Roosevelt",
+                    "Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate; only love can do that. - Martin Luther King",
+                    "Weak people revenge. Strong people forgive. Intelligent People Ignore. - Albert Einstein",
+                    "Spread love everywhere you go. Let no one ever come to you without leaving happier. - Mother Teresa",
+                    "Isn't it nice to think that tomorrow is a new day with no mistakes in it yet? - L.M. Montgomery",
+                    "All the darkness in the world cannot extinguish the light of a single candle. - Francis of Assisi",
+                    "You never fail until you stop trying. - Albert Einstein",
+                    "We don't stop playing because we grow old; we grow old because we stop playing. - George Bernard Shaw",
+                    "Kindness is a language which the deaf can hear and the blind can see. - Mark Twain",
+                    "I have never met a man so ignorant that I couldn't learn something from him  - Galileo Galilei",
+                    "He that can have patience can have what he will. - Benjamin Franklin",
+                    "Those who look for the bad in people will surely find it. - Abraham Lincoln",
+                    "If you can't make it good, at least make it look good.  -  Bill Gates"
+                    ]
+
+        function getQuote(){
+            let quote=document.querySelector("div")
+            let quoteIndex=Math.floor(Math.random()*20);
+            quote.textContent=quoteData[quoteIndex]
+        }
+    </script>
+    
+</body>
+</html>

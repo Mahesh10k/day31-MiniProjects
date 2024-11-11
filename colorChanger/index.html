@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            font-size: 1rem;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="text" required id="input" onkeyup="backgroundChange(event)" placeholder="Enter Color Name">
+
+    <script>
+        let input=document.getElementById("input");
+        function backgroundChange(a){
+            if(a.key==="Shift"){
+            document.body.style.backgroundColor=input.value;
+            }else{
+            document.body.style.backgroundColor="white"
+            }
+        }
+        
+    </script>
+</body>
+</html>

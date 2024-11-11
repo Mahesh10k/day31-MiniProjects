@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            height: 95vh;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="password" id="password" required placeholder="Enter Password">
+    <i class="fa-solid fa-eye" onclick="show()" id="eye"></i>
+
+
+    <script>
+        let passwordShow=document.getElementById("password")
+        function show(){
+            let eyeShow=document.getElementById("eye")
+            if(eye.className=="fa-solid fa-eye"){
+                eyeShow.className="fa-solid fa-eye-slash"
+                passwordShow.type="text"
+            }
+            else{
+                eyeShow.className="fa-solid fa-eye"
+                passwordShow.type="password"
+            }
+        }
+    </script>
+</body>
+</html>
